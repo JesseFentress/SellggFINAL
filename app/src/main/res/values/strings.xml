@@ -11,4 +11,12 @@
     <string name="login_failed">"Login failed"</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="textview">TextView</string>
+    <string name="account_informatioin">Account Informatioin</string>
+    <string name="username">Username</string>
+    <string name="e_mail">E-Mail:</string>
+    <string name="password">Password:</string>
+    <string name="number_of_listings">Number of Listings:</string>
+    <string name="usernames">Username:</string>
+    <string name="search">Search</string>
 </resources>

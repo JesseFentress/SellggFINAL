@@ -12,12 +12,15 @@ import android.accounts.Account;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.sellgg.ui.login.User;
 import com.google.android.material.navigation.NavigationView;
 
 
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawer;
+
+    public User acc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
