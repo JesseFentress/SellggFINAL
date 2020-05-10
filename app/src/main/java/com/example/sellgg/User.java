@@ -1,8 +1,11 @@
-package com.example.sellgg.ui.login;
+package com.example.sellgg;
 
 import android.widget.EditText;
 import java.util.*;
 
+/**
+ * Class that holds user information
+ */
 public class User
 {
     protected String username;
@@ -14,7 +17,7 @@ public class User
     //protected MyProducts listings;
 
     /**
-     *
+     * Default constructor
      */
     public User() {
         // TODO Auto-generated constructor stub
@@ -54,6 +57,26 @@ public class User
     }
 
     /**
+     * @param firstName the first name
+     */
+    public void setFirstName(String firstName) { this.firstName = firstName;}
+
+    /**
+     * @return the first name
+     */
+    public String getFirstName() { return firstName;}
+
+    /**
+     * @param lastName the last name
+     */
+    public void setLastName(String lastName) { this.lastName = lastName;}
+
+    /**
+     * @return the last name
+     */
+    public String getLastName() { return lastName;}
+
+    /**
      * @return the email
      */
     public String getEmail() {
@@ -91,6 +114,9 @@ public class User
      */
     public void setUUID(UUID userID) { this.userID = userID; }
 
+    /**
+     * @return String
+     */
     @Override
     public String toString() {
         return "User [username=" + username + ", email=" + email + ", password=" + password + ", listings="
@@ -99,5 +125,3 @@ public class User
 
 
 }
-
-

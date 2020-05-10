@@ -1,4 +1,4 @@
-package com.example.sellgg.ui.login;
+package com.example.sellgg;
 
 import androidx.annotation.Nullable;
 
@@ -11,19 +11,31 @@ class LoginResult {
     @Nullable
     private Integer error;
 
+    /**
+     * @param error
+     */
     LoginResult(@Nullable Integer error) {
         this.error = error;
     }
 
+    /**
+     * @param success
+     */
     LoginResult(@Nullable LoggedInUserView success) {
         this.success = success;
     }
 
+    /**
+     * @return success
+     */
     @Nullable
     LoggedInUserView getSuccess() {
         return success;
     }
 
+    /**
+     * @return error
+     */
     @Nullable
     Integer getError() {
         return error;

@@ -19,4 +19,15 @@
     <string name="number_of_listings">Number of Listings:</string>
     <string name="usernames">Username:</string>
     <string name="search">Search</string>
+    <string name="get_results">Get Results</string>
+    <string name="sell_gg_price">Sell.gg Price</string>
+    <string name="average_price">Average Price</string>
+    <string name="list_with_avg_price">List with Avg Price</string>
+    <string name="list_with_sell_gg_price">List with Sell.gg Price</string>
+    <string name="sell_gg">Sell.gg</string>
+    <string name="log_in">Log in</string>
+    <string name="sign_up">Sign-Up</string>
+    <string name="avgprices">$.$$</string>
+    <string name="sellggprices">$.$$</string>
+    <string name="button">Button</string>
 </resources>

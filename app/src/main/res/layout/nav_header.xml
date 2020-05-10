@@ -10,21 +10,19 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/ic_logo"
-        />
+        android:layout_width="105dp"
+        android:layout_height="97dp"
+        android:src="@drawable/ic_logo" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="2dp"
+        android:layout_width="171dp"
+        android:layout_height="130dp"
+        android:fontFamily="@font/bangers"
         android:paddingBottom="2dp"
         android:text="Sell.GG"
         android:textAllCaps="true"
-        android:textSize="35dp"
         android:textColor="#c380f2"
-        android:fontFamily="@font/bangers"/>
+        android:textSize="25dp" />
 
     <TextView
         android:layout_width="wrap_content"

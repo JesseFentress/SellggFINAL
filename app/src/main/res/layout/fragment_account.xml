@@ -1,105 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/holo_purple">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/accinfo"
+android:background="@android:color/white"
+android:layout_width="match_parent"
+android:padding="10dp"
+android:layout_height="match_parent"
+android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/account_informatioin"
+        android:layout_gravity="center_horizontal"
         android:textSize="25sp"
-        android:textColor="#FFFFFF"
-        android:layout_centerHorizontal="true"/>
+        android:textColor="@android:color/holo_purple"
+        android:fontFamily="@font/bangers"
+        android:padding="8dp"/>
 
     <TextView
-        android:id="@+id/username_label"
+    android:id="@+id/username_label"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="monospace"
+    android:text="@string/usernames" />
+
+<TextView
+    android:id="@+id/username"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_toRightOf="@+id/username_label"
+    android:ems="10" />
+
+<TextView
+    android:id="@+id/email_label"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="monospace"
+    android:text="@string/e_mail" />
+
+<TextView
+    android:id="@+id/email"
+    android:layout_width="168dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:ems="30" />
+
+<TextView
+    android:id="@+id/password_label"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="monospace"
+    android:text="@string/password" />
+
+<TextView
+    android:id="@+id/password"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:ems="15"
+    android:numeric="signed|decimal"
+    android:password="true" />
+
+<TextView
+    android:id="@+id/listings_label"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="monospace"
+    android:text="@string/number_of_listings" />
+
+
+<TextView
+    android:id="@+id/listings"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:ems="10"
+    android:layout_marginBottom="10dp"/>
+
+<TextView
+    android:id="@+id/firstName_label"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="First Name:" />
+
+<TextView
+    android:id="@+id/firstName"
+    android:layout_width="171dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"/>
+
+<TextView
+    android:id="@+id/lastName_label"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Last Name:"/>
+
+<TextView
+    android:id="@+id/lastName"
+    android:layout_width="172dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/edit_settings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="75dp"
-        android:layout_marginTop="55dp"
-        android:fontFamily="monospace"
-        android:text="@string/usernames"
-        android:layout_marginStart="75dp" />
-
-    <TextView
-        android:id="@+id/email_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="75dp"
-        android:layout_marginTop="95dp"
-        android:fontFamily="monospace"
-        android:text="@string/e_mail"
-        android:layout_marginStart="75dp" />
-
-    <TextView
-        android:id="@+id/password_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="75dp"
-        android:layout_marginTop="135dp"
-        android:fontFamily="monospace"
-        android:text="@string/password"
-        android:layout_marginStart="75dp" />
-
-    <TextView
-        android:id="@+id/listings_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="75dp"
-        android:layout_marginTop="175dp"
-        android:fontFamily="monospace"
-        android:text="@string/number_of_listings"
-        android:layout_marginStart="75dp" />
-
-    <TextView
-        android:id="@+id/email"
-        android:layout_width="167dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="66dp"
-        android:layout_marginLeft="66dp"
-        android:layout_marginTop="95dp"
-        android:layout_toEndOf="@+id/email_label"
-        android:layout_toRightOf="@+id/email_label"
-        android:ems="5"
-        android:inputType="textEmailAddress" />
-
-    <TextView
-        android:id="@+id/password"
-        android:layout_width="168dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="135dp"
-        android:layout_toEndOf="@+id/password_label"
-        android:layout_toRightOf="@+id/password_label"
-        android:ems="10"
-        android:inputType="textPassword" />
-
-    <TextView
-        android:id="@+id/username"
-        android:layout_width="167dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="55dp
-"
-        android:layout_toEndOf="@+id/username_label"
-        android:layout_toRightOf="@+id/username_label"
-        android:ems="10"
-        android:inputType="textPersonName" />
-
-    <TextView
-        android:id="@+id/listings"
-        android:layout_width="104dp"
-        android:layout_height="22dp"
-        android:layout_marginStart="29dp"
-        android:layout_marginLeft="29dp"
-        android:layout_marginTop="175dp"
-        android:layout_toEndOf="@+id/listings_label"
-        android:layout_toRightOf="@+id/listings_label"
-        android:ems="10"
-        android:inputType="number" />
+        android:text="Edit Account"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/holo_purple"
+        android:padding="5dp"/>
 
 
-</RelativeLayout>
+</LinearLayout>

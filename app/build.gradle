@@ -34,4 +34,14 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation files('C:\\Program Files\\Android\\Android Studio\\lib\\log4j-1.2.16.jar')
+    implementation files('C:\\Program Files\\Android\\Android Studio\\lib\\finding.jar')
+    implementation files('C:\\Program Files\\Android\\Android Studio\\lib\\ebaycalls.jar')
+    implementation files('C:\\Program Files\\Android\\Android Studio\\lib\\ebaysdkcore.jar')
+    implementation files('C:\\Program Files\\Android\\Android Studio\\lib\\slf4j-api-1.7.25.jar')
+    implementation files('C:\\Program Files\\Android\\Android Studio\\lib\\slf4j-log4j12-1.7.25.jar')
+    implementation files('C:\\Program Files\\Android\\Android Studio\\lib\\javax.xml.soap-api-1.4.0.jar')
+    implementation files('C:\\Program Files\\Android\\Android Studio\\lib\\nano-0.7.0.jar')
+    implementation files('C:\\Program Files\\Android\\Android Studio\\lib\\json-simple-1.1.1.jar')
+    implementation files('C:\\Program Files\\Android\\Android Studio\\lib\\json-simple-1.1.1.jar')
 }

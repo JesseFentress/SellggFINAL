@@ -1,4 +1,4 @@
-package com.example.sellgg.ui.login;
+package com.example.sellgg;
 
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
@@ -13,6 +13,11 @@ import com.example.sellgg.data.LoginRepository;
  */
 public class LoginViewModelFactory implements ViewModelProvider.Factory {
 
+    /**
+     * @param modelClass
+     * @param <T>
+     * @return ViewModel
+     */
     @NonNull
     @Override
     @SuppressWarnings("unchecked")

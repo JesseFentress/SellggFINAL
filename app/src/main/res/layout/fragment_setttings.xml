@@ -2,16 +2,98 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_purple">
+    android:background="@android:color/white">
+
+    <EditText
+        android:id="@+id/new_email"
+        android:layout_width="179dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/new_pswd"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="51dp"
+        android:layout_marginLeft="51dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_toEndOf="@+id/em_label"
+        android:layout_toRightOf="@+id/em_label"/>
+
+    <EditText
+        android:id="@+id/new_pswd"
+        android:layout_width="143dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/new_uname"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="47dp"
+        android:layout_marginLeft="47dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_toEndOf="@+id/psw_label"
+        android:layout_toRightOf="@+id/psw_label" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Settings"
         android:textSize="25dp"
-        android:textColor="#FFFFFF"
+        android:padding="8dp"
+        android:textColor="@android:color/holo_purple"
+        android:fontFamily="@font/bangers"
         android:layout_centerHorizontal="true"/>
 
+    <TextView
+        android:id="@+id/uname_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="100dp"
+        android:text="New Username:"
+        android:textSize="20sp" />
 
+    <TextView
+        android:id="@+id/psw_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/uname_label"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="41dp"
+        android:text="New Password"
+        android:textSize="20sp" />
 
+    <TextView
+        android:id="@+id/em_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/psw_label"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="41dp"
+        android:text="New Email"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/new_uname"
+        android:layout_width="143dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="47dp"
+        android:layout_marginLeft="47dp"
+        android:layout_marginTop="83dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_toEndOf="@+id/uname_label"
+        android:layout_toRightOf="@+id/uname_label" />
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Changes"
+        android:layout_centerInParent="true"
+        android:background="@android:color/holo_purple"
+        android:padding="5dp"/>
 </RelativeLayout>

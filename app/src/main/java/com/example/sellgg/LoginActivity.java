@@ -1,4 +1,4 @@
-package com.example.sellgg.ui.login;
+package com.example.sellgg;
 
 import android.app.Activity;
 
@@ -23,15 +23,17 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.sellgg.Home;
-import com.example.sellgg.R;
-import com.example.sellgg.ui.login.LoginViewModel;
-import com.example.sellgg.ui.login.LoginViewModelFactory;
+/**
+ * Activity for the user login page
+ */
 
 public class LoginActivity extends AppCompatActivity {
 
     private LoginViewModel loginViewModel;
 
+    /**
+     * @param savedInstanceState
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +47,10 @@ public class LoginActivity extends AppCompatActivity {
         final ProgressBar loadingProgressBar = findViewById(R.id.loading);
 
         loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {
+
+            /**
+             * @param loginFormState
+             */
             @Override
             public void onChanged(@Nullable LoginFormState loginFormState) {
                 if (loginFormState == null) {
@@ -61,6 +67,10 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         loginViewModel.getLoginResult().observe(this, new Observer<LoginResult>() {
+
+            /**
+             * @param loginResult
+             */
             @Override
             public void onChanged(@Nullable LoginResult loginResult) {
                 if (loginResult == null) {
@@ -81,16 +91,32 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         TextWatcher afterTextChangedListener = new TextWatcher() {
+
+            /**
+             * @param s
+             * @param start
+             * @param count
+             * @param after
+             */
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 // ignore
             }
 
+            /**
+             * @param s
+             * @param start
+             * @param before
+             * @param count
+             */
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 // ignore
             }
 
+            /**
+             * @param s
+             */
             @Override
             public void afterTextChanged(Editable s) {
                 loginViewModel.loginDataChanged(usernameEditText.getText().toString(),
@@ -101,6 +127,12 @@ public class LoginActivity extends AppCompatActivity {
         passwordEditText.addTextChangedListener(afterTextChangedListener);
         passwordEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
 
+            /**
+             * @param v
+             * @param actionId
+             * @param event
+             * @return
+             */
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
@@ -112,6 +144,10 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         loginButton.setOnClickListener(new View.OnClickListener() {
+
+            /**
+             * @param v
+             */
             @Override
             public void onClick(View v) {
                 loadingProgressBar.setVisibility(View.VISIBLE);
@@ -121,6 +157,9 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * @param model
+     */
     private void updateUiWithUser(LoggedInUserView model) {
         String welcome = getString(R.string.welcome) + model.getDisplayName();
         // TODO : initiate successful logged in experience
@@ -129,6 +168,9 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(loggedIn);
     }
 
+    /**
+     * @param errorString
+     */
     private void showLoginFailed(@StringRes Integer errorString) {
         Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
     }

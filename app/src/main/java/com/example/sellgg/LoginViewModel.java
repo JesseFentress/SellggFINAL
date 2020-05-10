@@ -1,4 +1,4 @@
-package com.example.sellgg.ui.login;
+package com.example.sellgg;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -9,7 +9,10 @@ import android.util.Patterns;
 import com.example.sellgg.data.LoginRepository;
 import com.example.sellgg.data.Result;
 import com.example.sellgg.data.model.LoggedInUser;
-import com.example.sellgg.R;
+
+/**
+ * Handles Login
+ */
 
 public class LoginViewModel extends ViewModel {
 
@@ -29,6 +32,10 @@ public class LoginViewModel extends ViewModel {
         return loginResult;
     }
 
+    /**
+     * @param username
+     * @param password
+     */
     public void login(String username, String password) {
         // can be launched in a separate asynchronous job
         Result<LoggedInUser> result = loginRepository.login(username, password);
@@ -41,6 +48,10 @@ public class LoginViewModel extends ViewModel {
         }
     }
 
+    /**
+     * @param username
+     * @param password
+     */
     public void loginDataChanged(String username, String password) {
         if (!isUserNameValid(username)) {
             loginFormState.setValue(new LoginFormState(R.string.invalid_username, null));
@@ -51,7 +62,11 @@ public class LoginViewModel extends ViewModel {
         }
     }
 
-    // A placeholder username validation check
+    /**
+     * A placeholder username validation check
+     * @param username
+     * @return
+     */
     private boolean isUserNameValid(String username) {
         if (username == null) {
             return false;
@@ -64,6 +79,12 @@ public class LoginViewModel extends ViewModel {
     }
 
     // A placeholder password validation check
+
+    /**
+     * A placeholder password validation check
+     * @param password
+     * @return
+     */
     private boolean isPasswordValid(String password) {
         return password != null && password.trim().length() > 5;
     }
